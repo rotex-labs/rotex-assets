@@ -1,0 +1,26 @@
+<svg width="1200" height="400" viewBox="0 0 368 120" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rotex logo - dark theme</title>
+  <desc id="desc">Rotex rotor mark and custom geometric ROTEX wordmark for dark backgrounds.</desc>
+
+  <!-- Mark: optically centered in a 96 by 96 area. -->
+  <g transform="translate(60 62) scale(1.08)">
+    <path d="M0 0V-36Q19-27 15-12Z" fill="#FF8A3D"/>
+    <path d="M0 0V-36Q19-27 15-12Z" fill="#FF8A3D" opacity=".80" transform="rotate(120)"/>
+    <path d="M0 0V-36Q19-27 15-12Z" fill="#FF8A3D" opacity=".68" transform="rotate(240)"/>
+    <circle r="4.2" fill="#FFC299"/>
+  </g>
+
+  <!-- Custom monoline letterforms; no font is required. -->
+  <g fill="none" stroke="#FF8A3D" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- R -->
+    <path d="M116 83V42H140L152 52V56L140 66H116M136 66L152 83" stroke-linecap="butt"/>
+    <!-- O -->
+    <rect x="163" y="42" width="36" height="40"/>
+    <!-- T -->
+    <path d="M210 42H246M228 42V82"/>
+    <!-- E -->
+    <path d="M293 42H257V82H293M257 62H289"/>
+    <!-- X -->
+    <path d="M303.25 41L340.75 83M340.75 41L303.25 83" stroke-linecap="butt"/>
+  </g>
+</svg>
