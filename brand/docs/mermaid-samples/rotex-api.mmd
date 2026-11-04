@@ -1,0 +1,69 @@
+flowchart TB
+  APP["Engine / game code"] --> RG["Render graph layer (rotex-graph): passes, resource lifetimes, auto barriers"]
+  RG --> ENC["Typed CommandEncoder<B> + Device<B> (static dispatch, no vtable)"]
+
+  subgraph SPINE["Horizontal spine: rotex-rhi-types, caps, core"]
+    S1["Generational handles"]
+    S2["Format table + Limits"]
+    S3["Caps const per backend: Native / Emulated / Absent"]
+  end
+  ENC --- SPINE
+
+  subgraph CORE["Core tier slices: identical semantics on every backend"]
+    C1["buffers"] 
+    C2["textures + samplers"]
+    C3["bind groups + push block"]
+    C4["graphics + compute pipelines"]
+    C5["passes + copies"]
+    C6["barriers"]
+    C7["queries"]
+    C8["presentation + readback"]
+  end
+  ENC --> CORE
+
+  subgraph EXT["Extension slices: compile-time opt-in via Supports<Feature>"]
+    E1["indirect draw"]
+    E2["bindless"]
+    E3["mesh shaders"]
+    E4["ray tracing"]
+    E5["VRS"]
+    E6["timeline sync"]
+    E7["third-party rotex-ext-*"]
+  end
+  ENC -. "only if backend implements trait" .-> EXT
+
+  subgraph EMU["emulation/ crate: documented cost"]
+    M1["push constants to UBO"]
+    M2["bind groups to uniform slots"]
+    M3["passes to dynamic rendering or FBO"]
+    M4["barriers to no-op"]
+    M5["state diffing instead of PSO"]
+  end
+
+  SHD["Shader cooker: Slang source to SPIR-V, DXIL, GLSL ES / GLSL 4.1, MSL, WGSL + one reflection layout"] --> CORE
+
+  subgraph BE["Backends: chosen by cargo feature at build time"]
+    B1["rotex-vulkan  (Vulkan 1.3) : core + all ext"]
+    B2["rotex-d3d12  (DX12; DX9/11 era features map into core) : core + mesh, DXR, VRS, bindless"]
+    B3["rotex-gl  (GL 4.1 / GLES3): core, compute 4.3+"]
+    B4["rotex-gl on wasm  (WebGL2): core minus compute/SSBO"]
+    B5["rotex-webgpu / wgpu: core + compute, Metal and WebGPU early"]
+  end
+  CORE --> B1
+  CORE --> B2
+  CORE --> B3
+  CORE --> B4
+  CORE --> B5
+  EXT --> B1
+  EXT --> B2
+  EMU --> B3
+  EMU --> B4
+  EMU --> B5
+
+  B1 --> V["Vulkan driver"]
+  B2 --> D["D3D12 runtime"]
+  B3 --> G["OpenGL driver"]
+  B4 --> W["Browser WebGL2"]
+  B5 --> WG["wgpu: Metal / DX12 / Vulkan / WebGPU"]
+
+  CONF["conformance suite: same tests run on every backend"] -. validates .-> BE
