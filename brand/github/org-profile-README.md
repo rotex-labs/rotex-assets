@@ -20,7 +20,7 @@
 | [`rotex-core`](https://github.com/rotex-labs/rotex-core) | spine | `Device`, command encoders, capability traits |
 | [`rotex-types`](https://github.com/rotex-labs/rotex-types) | spine | Descriptors, formats, capability model |
 | [`rotex-vulkan`](https://github.com/rotex-labs/rotex-vulkan) | backend | Vulkan via `ash` |
-| [`rotex-d3d12`](https://github.com/rotex-labs/rotex-d3d12) | backend | Direct3D 12 *(in progress)* |
+| [`rotex-d3d12`](https://github.com/rotex-labs/rotex-d3d12) | backend | Direct3D 12 |
 | [`rotex-wgpu`](https://github.com/rotex-labs/rotex-wgpu) | backend | wgpu: WebGPU, Metal and more |
 | `rotex-gl` | backend | OpenGL 4.x / ES 3 / WebGL2 *(planned)* |
 | [`rotex-graph`](https://github.com/rotex-labs/rotex-graph) | graph | Render graph with automatic barriers |
@@ -28,7 +28,7 @@
 
 <p>
   <img src="assets/badges/rotex-backend-vulkan-active.svg" alt="Vulkan: active" height="28">
-  <img src="assets/badges/rotex-backend-d3d12-in-progress.svg" alt="D3D12: in progress" height="28">
+  <img src="assets/badges/rotex-backend-d3d12-active.svg" alt="D3D12: active" height="28">
   <img src="assets/badges/rotex-backend-wgpu-active.svg" alt="wgpu: active" height="28">
   <img src="assets/badges/rotex-backend-opengl-planned.svg" alt="OpenGL: planned" height="28">
   <img src="assets/badges/rotex-backend-webgl-planned.svg" alt="WebGL: planned" height="28">

@@ -157,7 +157,7 @@ All three typefaces are under the SIL Open Font License 1.1. The files and licen
 
 | Component | Location and details |
 |---|---|
-| Backend badges | `badges/backend/{dark,light}/`, name-only and with-status versions. The statuses are **active** (Vulkan, wgpu), **in progress** (D3D12) and **planned** (OpenGL, WebGL, Metal). Update the status when the code changes. |
+| Backend badges | `badges/backend/{dark,light}/`, name-only and with-status versions. The statuses are **active** (Vulkan, wgpu, Direct3D 12) and **planned** (OpenGL, WebGL, Metal). Update the status when the code changes. |
 | Capability tags | `badges/capability/`. These map one-to-one to `rotex_types::Support`. **Native** is a solid dot, **Emulated** a half dot, **Absent** a dash with a dashed outline. Never use colour alone, because the shape carries the meaning for colour-blind readers. |
 | Crate header cards | `docs/crate-headers/`, 1200×300, dark and light. The layer stack on the right highlights the crate's layer. The `_template-header.svg` uses live text. |
 | README banners | `github/rotex-readme-banner-{dark,light}.svg`. Use them with a `<picture>` element (see `github/org-profile-README.md`). |
