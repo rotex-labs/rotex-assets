@@ -185,3 +185,11 @@ Rotex speaks like an engineer to engineers: **precise, honest and calm**.
 ## 10. Asset index
 
 See `README.md` at the root of the kit.
+
+## 11. Sub-brands
+
+**Ironshade** is the pure-Rust shader compiler in the Rotex family. It is a sub-brand: its own name and mark (the Shade Cube), endorsed by Rotex Engine. Assets and rules live in [`../ironshade/`](../ironshade/) and [`../ironshade/guidelines/brand-guidelines.md`](../ironshade/guidelines/brand-guidelines.md). Usage terms cover those marks too; see [`../../BRAND-LICENSE.md`](../../BRAND-LICENSE.md).
+
+The Shade Cube uses the Rotor Cube construction at rest (no twist) and leads with Shade Cyan. The Rotor Cube appears in Ironshade art only in the shipped endorsed lockup, beside the wordmark, never merged into the Shade Cube. Do not draw a new combination.
+
+When Ironshade material mentions Slang, include this notice: Slang™ and the Slang logo are trademarks of the Khronos Group Inc. The Ironshade logo files do not mention Slang. The rule is restated in the Ironshade guidelines.

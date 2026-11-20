@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Ironshade sub-brand under `brand/ironshade/`: Shade Cube mark, endorsed, horizontal, stacked and wordmark lockups; icons; README banners and social previews; design tokens; guidelines, CLI colour notes, README header draft and preview.
+- Asset index, Rotex guidelines and `BRAND-LICENSE.md` now cover the Ironshade marks.
+
 ## brand-v1.0 (unreleased)
 
 ### Added

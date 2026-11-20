@@ -1,0 +1,22 @@
+/* Tailwind CSS v4: Ironshade (Rotex family) theme.
+   @import "tailwindcss"; @import "./ironshade-tokens.css"; @import "./tailwind-v4.css"; */
+@theme {
+  --color-graphite-950:#0B0F1C; --color-graphite-900:#10162A; --color-graphite-850:#141B31; --color-graphite-800:#1A2238;
+  --color-graphite-700:#283252; --color-graphite-600:#3D4870; --color-graphite-500:#5B6688; --color-graphite-400:#7C88A8;
+  --color-graphite-300:#A9B3CC; --color-graphite-200:#CDD4E4; --color-graphite-100:#E8ECF4; --color-paper-50:#F6F8FC;
+  --color-rotor-300:#FFD06B; --color-rotor-400:#FFBE3B; --color-rotor-500:#FFA81F; --color-rotor-600:#E88A00; --color-rotor-700:#B86A00; --color-rotor-800:#8C4F00;
+  --color-shade-100:#D6F6FD; --color-shade-200:#AEEEFC; --color-shade-300:#7FE3FA; --color-shade-400:#3FD0F2; --color-shade-500:#12B5DD;
+  --color-shade-600:#0A93B8; --color-shade-700:#0B7593; --color-shade-800:#0A5B73; --color-shade-900:#073F51;
+  --color-native-400:#34D399; --color-native-700:#0E7A55;
+  --font-sans:"Inter","Inter Variable",system-ui,sans-serif;
+  --font-display:"Inter Tight","Inter",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --tracking-display:-0.02em; --tracking-label:0.12em; --tracking-wordmark:0.11em;
+  --ease-rotor:cubic-bezier(.2,.8,.2,1);
+}
+@theme inline {
+  --color-is-bg:var(--is-bg); --color-is-surface:var(--is-surface); --color-is-border:var(--is-border);
+  --color-is-text:var(--is-text); --color-is-muted:var(--is-text-muted); --color-is-accent:var(--is-accent);
+  --color-is-on-accent:var(--is-on-accent); --color-is-link:var(--is-link); --color-is-family:var(--is-family);
+  --color-is-native:var(--is-native); --color-is-emulated:var(--is-emulated); --color-is-absent:var(--is-absent);
+}
