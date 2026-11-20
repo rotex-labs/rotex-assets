@@ -1,0 +1,62 @@
+/* Ironshade design tokens v1.0, a Rotex Engine sub-brand.
+   The raw palette, type, spacing, radii and motion are the Rotex v1.0 tokens (rotex-tokens.css),
+   repeated here so this file works on its own. Only the semantic accent changes:
+   Rotex leads with Rotor Amber; Ironshade leads with Shade Cyan and keeps amber for the Rotex link,
+   the mark's hub and the Emulated state.
+   Fonts (SIL OFL-1.1): Inter, Inter Tight, JetBrains Mono. Dark is the default. */
+:root {
+  /* ---- shared Rotex palette ---- */
+  --rx-graphite-950:#0B0F1C; --rx-graphite-900:#10162A; --rx-graphite-850:#141B31; --rx-graphite-800:#1A2238;
+  --rx-graphite-700:#283252; --rx-graphite-600:#3D4870; --rx-graphite-500:#5B6688; --rx-graphite-400:#7C88A8;
+  --rx-graphite-300:#A9B3CC; --rx-graphite-200:#CDD4E4; --rx-graphite-100:#E8ECF4; --rx-paper-50:#F6F8FC; --rx-white:#FFFFFF;
+  --rx-amber-300:#FFD06B; --rx-amber-400:#FFBE3B; --rx-amber-500:#FFA81F; --rx-amber-600:#E88A00;
+  --rx-amber-700:#B86A00; --rx-amber-800:#8C4F00;
+  --rx-native-400:#34D399; --rx-native-700:#0E7A55;
+  --rx-danger-400:#F87171; --rx-danger-700:#B42323;
+
+  /* ---- Shade Cyan: Rotex Signal Cyan (300-700) extended to a full ramp ---- */
+  --is-cyan-100:#D6F6FD; --is-cyan-200:#AEEEFC; --is-cyan-300:#7FE3FA;
+  --is-cyan-400:#3FD0F2; /* Shade Cyan, Ironshade primary (= Rotex Signal Cyan 400) */
+  --is-cyan-500:#12B5DD; --is-cyan-600:#0A93B8; --is-cyan-700:#0B7593;
+  --is-cyan-800:#0A5B73; --is-cyan-900:#073F51;
+
+  /* ---- type (same as Rotex) ---- */
+  --is-font-sans:"Inter","Inter Variable",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --is-font-display:"Inter Tight","Inter",system-ui,sans-serif;
+  --is-font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --is-tracking-display:-0.02em; --is-tracking-label:0.12em; --is-tracking-wordmark:0.11em;
+  --is-radius-sm:6px; --is-radius-md:10px; --is-radius-lg:16px; --is-radius-pill:999px;
+  --is-ease:cubic-bezier(.2,.8,.2,1);
+
+  /* ---- semantic: dark (default) ---- */
+  color-scheme: dark;
+  --is-bg:var(--rx-graphite-950); --is-bg-raised:var(--rx-graphite-900); --is-surface:var(--rx-graphite-800);
+  --is-border:var(--rx-graphite-700); --is-text:var(--rx-paper-50); --is-text-muted:var(--rx-graphite-300); --is-text-subtle:var(--rx-graphite-400);
+  --is-accent:var(--is-cyan-400); --is-accent-hover:var(--is-cyan-300); --is-on-accent:var(--rx-graphite-950);
+  --is-link:var(--is-cyan-300);
+  --is-family:var(--rx-amber-400);          /* Rotex endorsement, "Rotex Engine" eyebrow */
+  /* capability states map 1:1 to Rotex Native / Emulated / Absent */
+  --is-native:var(--rx-native-400); --is-emulated:var(--rx-amber-500); --is-absent:var(--rx-graphite-400);
+  --is-error:var(--rx-danger-400); --is-warning:var(--rx-amber-400); --is-note:var(--is-cyan-300);
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --is-bg:var(--rx-paper-50); --is-bg-raised:var(--rx-white); --is-surface:var(--rx-white);
+  --is-border:var(--rx-graphite-200); --is-text:var(--rx-graphite-950); --is-text-muted:var(--rx-graphite-600); --is-text-subtle:var(--rx-graphite-500);
+  --is-accent:var(--is-cyan-700); --is-accent-hover:var(--is-cyan-800); --is-on-accent:var(--rx-white);
+  --is-link:var(--is-cyan-700);
+  --is-family:var(--rx-amber-800);
+  --is-native:var(--rx-native-700); --is-emulated:var(--rx-amber-800); --is-absent:var(--rx-graphite-500);
+  --is-error:var(--rx-danger-700); --is-warning:var(--rx-amber-800); --is-note:var(--is-cyan-700);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --is-bg:var(--rx-paper-50); --is-bg-raised:var(--rx-white); --is-surface:var(--rx-white);
+    --is-border:var(--rx-graphite-200); --is-text:var(--rx-graphite-950); --is-text-muted:var(--rx-graphite-600); --is-text-subtle:var(--rx-graphite-500);
+    --is-accent:var(--is-cyan-700); --is-accent-hover:var(--is-cyan-800); --is-on-accent:var(--rx-white);
+    --is-link:var(--is-cyan-700); --is-family:var(--rx-amber-800);
+    --is-native:var(--rx-native-700); --is-emulated:var(--rx-amber-800); --is-absent:var(--rx-graphite-500);
+    --is-error:var(--rx-danger-700); --is-warning:var(--rx-amber-800); --is-note:var(--is-cyan-700);
+  }
+}
